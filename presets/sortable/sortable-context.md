@@ -82,9 +82,9 @@ You may also nest `SortableContext` providers within other `SortableContext` pro
 
 // Good, nested DndContexts
 <DndContext>
-  <SortableContext items={["A, "B", "C"]}>
+  <SortableContext items={["A", "B", "C"]}>
     <DndContext>
-      <SortableContext items={["A, "B", "C"]}>
+      <SortableContext items={["A", "B", "C"]}>
         {/* ... */}
       </SortableContext>
     </DndContext>
@@ -93,8 +93,8 @@ You may also nest `SortableContext` providers within other `SortableContext` pro
 
 // Bad, nested Sortable contexts with `id` collisions
 <DndContext>
-  <SortableContext items={["A, "B", "C"]}>
-    <SortableContext items={["A, "B", "C"]}>
+  <SortableContext items={["A", "B", "C"]}>
+    <SortableContext items={["A", "B", "C"]}>
       {/* ... */}
     </SortableContext>
   </SortableContext>
